@@ -1,5 +1,5 @@
 function tests = ciecam022xyz_test
-tests = functiontests(localfunctions);
+tests =  functiontests(localfunctions);
 end
 
 function Fairchild_Table_16_4_Case_1_test(testcase)
