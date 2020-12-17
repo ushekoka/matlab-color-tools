@@ -8,7 +8,7 @@ function Fairchild_Table_16_4_Case_1_test(testcase)
 
 XYZ = [0.1901 0.2000 0.2178];
 XYZ_w = [0.9505 1.0000 1.0888];
-L_A = 318.31;
+L_A =  318.31;
 Y_b = 0.20;
 surround = 'average';
 
