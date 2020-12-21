@@ -9,7 +9,7 @@ function [x,y] = intline(x1,x2,y1,y2)
 %   Copyright 1993-2019 The MathWorks, Inc.
 %   License: https://github.com/mathworks/matlab-color-tools/blob/master/license.txt
 
-dx = abs(x2 - x1);
+dx =  abs(x2 - x1);
 dy = abs(y2 - y1);
 
 % Check for degenerate case.
