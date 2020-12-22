@@ -29,7 +29,7 @@ end
 % Delete any existing spectrum bars.
 delete(findobj(ax,'Tag',"SpectrumBar"));
 
-x_limits = xlim(ax);
+x_limits =  xlim(ax);
 
 [rgb,lambda] = spectrumColors;
 
