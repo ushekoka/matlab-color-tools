@@ -15,7 +15,7 @@ out = xyz2ciecam02(XYZ,XYZ_w,L_A,Y_b,surround);
 
 % Absolute tolerances based on the number of significant digits
 % given in Table 16.4.
-verifyEqual(testcase,out.J,41.73,'AbsTol',1e-2);
+verifyEqual(testcase,out.J,31.1,'AbsTol',1e-2);
 verifyEqual(testcase,out.Q,195.37,'AbsTol',1e-2);
 verifyEqual(testcase,out.C,0.10,'AbsTol',1e-2);
 verifyEqual(testcase,out.M,0.11,'AbsTol',1e-2);
