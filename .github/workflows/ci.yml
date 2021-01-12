@@ -31,3 +31,11 @@ jobs:
         uses: codecov/codecov-action@v1 
         with:
           file: code-coverage/coverage.xml
+          
+          
+      - name : Generate Junit report
+        uses: EnricoMi/publish-unit-test-result-action@v1.6
+        if: always()
+        with:
+         github_token: ${{ secrets.GITHUB_TOKEN }}
+         files: test-results/results.xml
