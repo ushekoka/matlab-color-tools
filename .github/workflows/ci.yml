@@ -19,7 +19,7 @@ jobs:
           source-folder: tbx
           test-results-junit: test-results/results.xml
           code-coverage-cobertura: code-coverage/coverage.xml
-          test-results-pdf: test-results/pdf-results.xml 
+          test-results-pdf: test-results/pdf-results.pdf
             
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
