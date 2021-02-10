@@ -24,8 +24,8 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: code-coverage-artifact
-          path: code-coverage/coverage.xml
+          name: PDFt
+          path: test-results/pdf-results.pdf
           
       - name: upload to codecov 
         uses: codecov/codecov-action@v1 
