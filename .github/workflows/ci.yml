@@ -21,7 +21,6 @@ jobs:
           code-coverage-cobertura: code-coverage/coverage.xml
           test-results-pdf: test-results/pdf-results.pdf
           select-by-folder: newtests
-          select-by-tag: 'Unit'
             
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
@@ -29,15 +28,4 @@ jobs:
           name: PDFt
           path: test-results/pdf-results.pdf
           
-      - name: upload to codecov 
-        uses: codecov/codecov-action@v1 
-        with:
-          file: code-coverage/coverage.xml
           
-          
-      - name : Generate Junit report
-        uses: EnricoMi/publish-unit-test-result-action@v1.6
-        if: always()
-        with:
-         github_token: ${{ secrets.GITHUB_TOKEN }}
-         files: test-results/results.xml
