@@ -14,9 +14,9 @@ jobs:
         
 
       - name: Run Tests
-        uses: matlab-actions/run-tests@feature-newoption-tests
+        uses: matlab-actions/run-tests@v0
         with:
-          source-folder: tbx
+          source-folder: tbx;misc
           test-results-junit: test-results/results.xml
           code-coverage-cobertura: code-coverage/coverage.xml
           test-results-pdf: test-results/pdf-results.pdf
