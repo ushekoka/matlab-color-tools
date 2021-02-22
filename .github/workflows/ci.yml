@@ -23,7 +23,9 @@ jobs:
           select-by-folder: newtests,tests
       
       - name: Verify artifact generation
-        run: test -f test-results/results.xml
+        run: |
+          test -f test-results/results.xml && echo "File exists" || echo "File does not exist"
+          test -f test-results/results11.xml && echo "File exists" || echo "File does not exist"
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
