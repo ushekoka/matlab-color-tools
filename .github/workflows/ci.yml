@@ -24,8 +24,8 @@ jobs:
       
       - name: Verify artifact generation
         run: |
-          (test -f test-results/results.xml) || (echo "File does not exist" && exit 1)
-          (test -f test-results/results11.xml ) || (echo  "File does not exist" && exit 1)
+          (test -f test-results/results.xml) || (echo "File results.xml does not exist" && exit 1)
+          (test -f test-results/results11.xml ) || (echo  "File results11.xml does not exist" && exit 1)
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
