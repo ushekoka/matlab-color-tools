@@ -15,23 +15,7 @@ jobs:
           release: R2020a
         
 
-      - name: Run Tests
-        uses: matlab-actions/run-tests@main
+    -name: Run script
+        uses: matlab-actions/run-command@v0
         with:
-          source-folder: tbx;misc
-          test-results-junit: test-results/results.xml
-          code-coverage-cobertura: code-coverage/coverage.xml
-          test-results-pdf: test-results/pdf-results.pdf
-          select-by-folder: newtests,tests
-      
-      - name: Verify artifact generation
-        run: |
-          (test -f test-results/results.xml) || (echo "File results.xml does not exist" && exit 1)
-          (test -f test-results/results11.xml ) || (echo  "File results11.xml does not exist" && exit 1)
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: PDFt
-          path: test-results/pdf-results.pdf
-          
-          
+          command: disp("Hello")       
